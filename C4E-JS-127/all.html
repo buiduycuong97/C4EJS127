@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./all.css">
+    <title>Document</title>
+
+</head>
+
+<body id="body">
+    <nav class="navbar">
+        <div>
+            <ul class="navbar_ul1">
+                <li><a class="ah" href="./store.html">store</a></li>
+                <li class="menu_link">
+                    <a class="ah" href="./coll1.html">collection</a>
+
+                    <ul class="sub_navbar">
+                        <li><a class="ah" href="./coll1.html">001</a></li>
+                        <li><a class="ah" href="./coll2.html">002</a></li>
+                        <li><a class="ah" href="./coll3.html">003</a></li>
+                    </ul>
+                </li>
+                <li class="menu_link2">
+                    <a class="ah" href="./lib.html">Library</a>
+                    <ul class="sub_navbar">
+                        <li><a href="./all.html" class="ah">Allegro</a></li>
+                        <li><a href="./moder.html" class="ah">Moderato</a></li>
+                        <li><a href="./ada.html" class="ah" href="">Andante</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar_home"><a class="ah" href="./index.html">Deja Vu</a></div>
+        <div>
+            <ul class="navbar_ul2">
+                <li><a class="ah" href="./care.html">custome care</a></li>
+                <li><a class="ah" href="#" onclick="signIn()">Account</a></p>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="main">
+        <div class="main_gt">
+            <h1>120 – 156 Allegro Work Jacket</h1>
+
+            <p>Our Allegro Work Jacket features storm flap paneling along the rear shoulders and sleeves to deflect wind and improve movement in harsher weather conditions. The jacket is composed of 100% Alpaca Wool Blend with Rayon lining for maximum comfort
+                and warmth. Riri zippers ensure smooth fastening and double Cobrax snap closures on the sleeves allow for adjustment to the storm flaps. The cut of the jacket is boxy and cropped with an oversized silhouette. We recommend to go true to
+                size or to size down for a fitted look.</p>
+            <p>Composition<br> Body: 100% wool<br> Lining: 100% rayon</p>
+
+            <p>Made in Japan<br> 0052511WJ2
+            </p>
+        </div>
+
+        <div class="pic">
+            <img class="img_st" src="./pic/all/Allegro-1.jpg" alt="">
+            <img class="img_st" src="./pic/all/Allegro-2.jpg" alt="">
+            <img class="img_st" src="./pic/all/Allegro-3.jpg" alt="">
+        </div>
+
+        <div class="pic">
+            <img class="img_st" src="./pic/all/Allegro-4.jpg" alt="">
+            <img class="img_st" src="./pic/all/Allegro-5.jpg" alt="">
+            <img class="img_st" src="./pic/all/Allegro-6.jpg" alt="">
+        </div>
+
+        <div class="pic">
+            <img class="img_st" src="./pic/all/Allegro-7.jpg" alt="">
+            <img class="img_st" src="./pic/all/Allegro-8-1.jpg" alt="">
+            <img class="img_st" src="./pic/all/Allegro-8-2.jpg" alt="">
+        </div>
+
+        <div class="pic">
+            <img class="img_st1" src="./pic/all/Allegro-8-3.jpg" alt="">
+        </div>
+        <div class="btn">
+            <a href="./lib1.html">Shop</a>
+        </div>
+
+        <div class="pic">
+            <img class="img_st" src="./pic/all/lp+wj-back-fit.jpg" alt="">
+            <img class="img_st" src="./pic/all/lp+wj-front-fit.jpg" alt="">
+            <img class="img_st" src="./pic/all/lp+wj-side-fit.jpg" alt="">
+        </div>
+
+        <div class="pic">
+            <img class="img_st3" src="./pic/all/allegro-size-black.jpg" alt="">
+        </div>
+
+        <div class="footer">
+            <p>Fantaisie-Impromptu in C♯ minor<br> Op. posth. 66 – Frédéric Chopin (1834)</p>
+        </div>
+
+    </nav>
+    <div id="signIn" class="account">
+        <div class="box">
+            <h1>Welcome to DE JAVU</h1>
+            <h3 id="exit"><a href="">X</a></h3>
+            <form action="" onsubmit="submitformsignIn()">
+                <input id="usname" size=40 type="email" placeholder="Email" required><br>
+                <input id="psword" size=40 type="password" placeholder="Password" required><br>
+                <input onclick="" type="submit" value="Log In">
+            </form>
+            <span><a href="">Forgot Password?</a></span>
+            <span><a href="#" onclick="signUp()">Create account</a></span>
+        </div>
+    </div>
+    <div id="signUp" class="account">
+        <div class="box">
+            <h1>Welcome to DE JAVU</h1>
+            <h3 id="exit"><a href="">X</a></h3>
+            <form action="" onsubmit="submitformsignUp()">
+                <input id="username" size=40 type="email" placeholder="Email" required><br>
+                <input id="password" size=40 type="password" placeholder="Password" required><br>
+                <input type="submit" value="Sign Up">
+            </form>
+            <span><a href="">Forgot Password?</a></span>
+            <span><a href="#" onclick="signIn()">Already have?</a></span>
+
+        </div>
+    </div>
+</body>
+<script>
+    function signUp() {
+        document.getElementById("signIn").style.display = 'none';
+        document.getElementById("signUp").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)';
+    }
+
+    function signIn() {
+        document.getElementById("signUp").style.display = 'none';
+        document.getElementById("signIn").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)';
+    }
+
+    function submitformsignUp() {
+        document.getElementById("signIn").style.display = 'none';
+        document.getElementById("signUp").style.display = 'none';
+        document.getElementById("body").style.backgroundColor = '#ffffff';
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        alert("SUCCESS !")
+    }
+
+    function submitformsignIn() {
+
+        let username = document.getElementById('usname').value;
+        let password = document.getElementById('psword').value;
+        let usSignUp = localStorage.getItem('username')
+        let psSignUp = localStorage.getItem('password')
+        if (username == usSignUp && password == psSignUp) {
+            alert("SUCCESS !");
+            document.getElementById("signIn").style.display = 'none';
+            document.getElementById("signUp").style.display = 'none';
+            document.getElementById("body").style.backgroundColor = '#ffffff';
+        } else {
+            alert("FAIL !");
+        }
+
+    }
+</script>
+
+</html>

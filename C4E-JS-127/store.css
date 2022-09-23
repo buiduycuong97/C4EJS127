@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    color: black;
+}
+
+.navbar{
+    display: flex;
+    align-items: stretch;
+    height: 100px;
+    padding: 20px;
+    font-size: 25px;
+    color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.sub_navbar{
+    position: absolute;
+    list-style: none;
+    text-align: center;
+    width: 100px;
+    margin-top: 70px;
+    display: none;
+    top: 0px;
+    left: 95px;
+}
+.menu_link2 .sub_navbar{
+    position: absolute;
+    left: 220px;
+}
+
+.sub_navbar a{
+    font-size: 15px;
+    text-decoration: none;
+}
+.navbar_ul1 .menu_link:hover .sub_navbar{
+    display: block;
+}
+.navbar_ul1 .menu_link2:hover .sub_navbar{
+    display: block;
+}
+
+.navbar_ul1 li:hover{
+    text-decoration: underline;
+    color: black;
+    scale: (1,1);
+}
+
+.navbar_ul1{
+    display: flex;
+    list-style : none;
+    flex-grow: 1;
+    justify-content: end;
+    text-align: center;
+    padding-left: 0px; 
+}
+
+.navbar_ul2{
+    display: flex;
+    list-style : none;
+    flex-grow: 1;
+    justify-content: end;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.navbar_home{
+    flex-grow: 7;
+    text-align: center;
+    font-size: 35px;
+}
+.navbar_home a{
+    font-size: 35px;
+}
+
+.ah {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 17px;
+}
+
+.ah:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.ah:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-size: 13px;
+    gap : 30px
+}
+.item{
+    display: block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 0;
+}
+.item img{
+    width: 500px;
+    height: 800px;
+}
+.img_area{
+    position: relative;
+    z-index: 0;
+    width: 500px;
+    height: 800px;
+}
+.img_area img{
+    position: absolute;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+    width: 500px;
+    height: 800px;
+}
+.img_area img.img_back:hover{
+    opacity: 0;
+    cursor: pointer;
+}

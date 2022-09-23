@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="./acc.html">
+    <style>
+        #signIn {
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            padding: 70px;
+            transform: translateX(-50%);
+            background-color: rgb(51, 51, 51);
+            display: none;
+        }
+        
+        #signUp {
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            padding: 50px;
+            transform: translateX(-50%);
+            background-color: rgb(51, 51, 51);
+            display: none;
+        }
+        
+        .account h1 {
+            margin-bottom: 20px;
+        }
+        
+        .account input {
+            margin-bottom: 10px;
+        }
+        
+        .account form {
+            margin-bottom: 20px;
+        }
+        
+        .account span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        #exit a {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <nav class="navbar">
+        <div>
+            <ul class="navbar_ul1">
+                <li><a class="ah" href="./store.html">store</a></li>
+                <li class="menu_link">
+                    <a class="ah" href="./coll1.html">collection</a>
+
+                    <ul class="sub_navbar">
+                        <li><a class="ah" href="./coll1.html">001</a></li>
+                        <li><a class="ah" href="./coll2.html">002</a></li>
+                        <li><a class="ah" href="./coll3.html">003</a></li>
+                    </ul>
+                </li>
+                <li class="menu_link2">
+                    <a class="ah" href="./lib.html">Library</a>
+                    <ul class="sub_navbar">
+                        <li><a href="./all.html" class="ah">Allegro</a></li>
+                        <li><a href="./moder.html" class="ah">Moderato</a></li>
+                        <li><a href="./ada.html" class="ah" href="">Andante</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar_home"><a class="ah" href="./index.html">Deja Vu</a></div>
+        <div>
+            <ul class="navbar_ul2">
+                <li><a class="ah" href="./care.html">custome care</a></li>
+                <li><a class="ah" href="#" onclick="signIn()">Account</a></p>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a class="item" id="item1" href="./Sw1.html">
+            <div class="img_area">
+                <img class="img_font" src="./pic/Sw1/Beige-Model-Front.png" alt="">
+                <img class="img_back" src="./pic/Sw1/BeigeKnit.jpg" alt="">
+            </div>
+            <p class="item_p"><b>LOW-GAUGE KNIT SWEATER (NUDE IVORY)</b><br>$350.00</p>
+            <a href=""></a>
+
+            <a class="item" href="./Sw2.html">
+                <div class="img_area">
+                    <img class="img_font" src="./pic/Sw2/AnyConv.com__837E5BE1-EE46-46B8-8291-3FA1EFEBB451.jpg" alt="">
+                    <img class="img_back" src="./pic/Sw2/AnyConv.com__GreenKnit.jpeg" alt="">
+                </div>
+
+                <p><b>LOW-GAUGE KNIT SWEATER (MOSS GREEN)</b><br>$350.00</p>
+            </a>
+
+            <a class="item" id="item3" href="./sw3.html">
+                <div class="img_area">
+                    <img class="img_font" id="item3" src="./pic/Sw3/Varsity-Back.jpg" alt="">
+                    <img class="img_back" id="item3" src="./pic/Sw3/Varsity-Front.jpg" alt="">
+                </div>
+
+                <p><b>VUJA DÉ X PROLETA RE ART 'WINTER WIND' VARSITY JACKET (PRE-ORDER)</b><br>$2,850.00</p>
+            </a>
+    </div>
+    <div class="container">
+        <a class="item" href="./sw4.html">
+            <div class="img_area">
+                <img class="img_font" src="./pic/Sw4/workjacket-back (1).jpg" alt="">
+                <img class="img_back" src="./pic/Sw4/jacket-front-new.jpg" alt="">
+            </div>
+            <p><b>ALLEGRO WORK JACKET</b><br>$685.00</p>
+        </a>
+
+        <a class="item" href="./sw5.html">
+            <div class="img_area">
+                <img class="img_font" src="./pic/Sw5/wo-front-fit.jpg" alt="">
+                <img class="img_back" src="./pic/Sw5/overshirt-front.jpg" alt="">
+            </div>
+
+            <p><b>MODERATO WOOL OVERSHIRT</b><br>$395.00</p>
+        </a>
+
+        <a class="item" href="./sw6.html">
+            <div class="img_area">
+                <img class="img_font" src="./pic/Sw6/pewter+glitch-front-new.jpg" alt="">
+                <img class="img_back" src="./pic/Sw6/denim+front.jpg" alt="">
+            </div>
+            <p><b>VUJA DÉ X PROLETA RE ART 'GLITCH BORO' DENIM (PRE-ORDER)</b><br>$1,950.00</p>
+        </a>
+    </div>
+
+
+    <div id="signIn" class="account">
+        <div class="box">
+            <h1>Welcome to DE JAVU</h1>
+            <h3 id="exit"><a href="">X</a></h3>
+            <form action="" onsubmit="submitformsignIn()">
+                <input id="usname" size=40 type="email" placeholder="Email" required><br>
+                <input id="psword" size=40 type="password" placeholder="Password" required><br>
+                <input onclick="" type="submit" value="Log In">
+            </form>
+            <span><a href="">Forgot Password?</a></span>
+            <span><a href="#" onclick="signUp()">Create account</a></span>
+        </div>
+    </div>
+    <div id="signUp" class="account">
+        <div class="box">
+            <h1>Welcome to DE JAVU</h1>
+            <h3 id="exit"><a href="">X</a></h3>
+            <form action="" onsubmit="submitformsignUp()">
+                <input id="username" size=40 type="email" placeholder="Email" required><br>
+                <input id="password" size=40 type="password" placeholder="Password" required><br>
+                <input type="submit" value="Sign Up">
+            </form>
+            <span><a href="">Forgot Password?</a></span>
+            <span><a href="#" onclick="signIn()">Already have?</a></span>
+
+        </div>
+    </div>
+
+</body>
+<script src=""></script>
+
+<script>
+    function signUp() {
+        document.getElementById("signIn").style.display = 'none';
+        document.getElementById("signUp").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)';
+    }
+
+    function signIn() {
+        document.getElementById("signUp").style.display = 'none';
+        document.getElementById("signIn").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)';
+    }
+
+    function submitformsignUp() {
+        document.getElementById("signIn").style.display = 'none';
+        document.getElementById("signUp").style.display = 'none';
+        document.getElementById("body").style.backgroundColor = '#ffffff';
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        alert("SUCCESS !")
+    }
+
+    function submitformsignIn() {
+
+        let username = document.getElementById('usname').value;
+        let password = document.getElementById('psword').value;
+        let usSignUp = localStorage.getItem('username')
+        let psSignUp = localStorage.getItem('password')
+        if (username == usSignUp && password == psSignUp) {
+            alert("SUCCESS !");
+            document.getElementById("signIn").style.display = 'none';
+            document.getElementById("signUp").style.display = 'none';
+            document.getElementById("body").style.backgroundColor = '#ffffff';
+        } else {
+            alert("FAIL !");
+        }
+
+    }
+</script>
+
+</html>

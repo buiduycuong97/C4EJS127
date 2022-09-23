@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="care.css">
+    <script src="care.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            color: black;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: stretch;
+            height: 100px;
+            padding: 20px;
+            font-size: 25px;
+            color: black;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        .sub_navbar {
+            position: absolute;
+            list-style: none;
+            text-align: center;
+            width: 100px;
+            text-decoration: none;
+            margin-top: 50px;
+            display: none;
+            top: 0px;
+        }
+        
+        .sub_navbar a {
+            font-size: 15px;
+            text-decoration: none;
+        }
+        
+        .navbar_ul1 .menu_link:hover .sub_navbar {
+            display: block;
+        }
+        
+        .navbar_ul1 li:hover {
+            text-decoration: underline;
+            color: black;
+            scale: (1, 1);
+        }
+        
+        .navbar_ul1 {
+            display: flex;
+            list-style: none;
+            flex-grow: 1;
+            justify-content: end;
+            text-align: center;
+            padding-left: 0px;
+            position: relative;
+        }
+        
+        .navbar_ul2 {
+            display: flex;
+            list-style: none;
+            flex-grow: 1;
+            justify-content: end;
+            text-align: center;
+            padding-right: 30px;
+            position: relative;
+        }
+        
+        .navbar_home {
+            flex-grow: 7;
+            text-align: center;
+            font-size: 35px;
+            position: relative;
+        }
+        
+        .navbar_home a {
+            font-size: 35px;
+        }
+        
+        .ah {
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 20px;
+            position: relative;
+            font-size: 17px;
+        }
+        
+        .ah:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: black;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+        
+        .ah:hover:after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .contain {
+            width: 30%;
+        }
+        
+        .contain input {
+            width: 100%;
+            border: 1px solid rgba(51, 51, 51, 0.479);
+            border-radius: 2px;
+        }
+        
+        .contact {
+            padding-top: 200px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .myform input {
+            margin-bottom: 20px;
+        }
+        
+        #message {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+        }
+        
+        .sub_reset {
+            text-align: center;
+        }
+        
+        #subRe {
+            width: 20%;
+            height: 30px;
+            background-color: rgba(51, 51, 51, 0.541);
+            text-transform: uppercase;
+        }
+        
+        #signIn {
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            padding: 70px;
+            transform: translateX(-50%);
+            background-color: rgb(51, 51, 51);
+            display: none;
+        }
+        
+        #signUp {
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            padding: 50px;
+            transform: translateX(-50%);
+            background-color: rgb(51, 51, 51);
+            display: none;
+        }
+        
+        .account h1 {
+            margin-bottom: 20px;
+        }
+        
+        .account input {
+            margin-bottom: 10px;
+        }
+        
+        .account form {
+            margin-bottom: 20px;
+        }
+        
+        .account span {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        #exit a {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <nav class="navbar">
+        <div>
+            <ul class="navbar_ul1">
+                <li><a class="ah" href="./store.html">store</a></li>
+                <li class="menu_link">
+                    <a class="ah" href="./coll1.html">collection</a>
+                    <ul class="sub_navbar">
+                        <li><a class="ah" href="./coll1.html">001</a></li>
+                        <li><a class="ah" href="./coll2.html">002</a></li>
+                        <li><a class="ah" href="./coll3.html">003</a></li>
+                    </ul>
+                </li>
+                <li><a class="ah" href="./lib.html">Library</a></li>
+            </ul>
+        </div>
+        <div class="navbar_home"><a class="ah" href="./index.html">Deja Vu</a></div>
+        <div>
+            <ul class="navbar_ul2">
+                <li><a class="ah" href="./care.html">custome care</a></li>
+                <li><a class="ah" href="#" onclick="signIn()">Account</a></p>
+            </ul>
+        </div>
+    </nav>
+    <div class="contact">
+        <div class="contain">
+            <div>
+                <h3>
+                    CONTACT US
+                </h3><br>
+                <span>Before submitting a contact form, we kindly request that all customers read through our Customer Care information here. For all applicable inquiries, please fill out the form below and we will respond at our soonest availability. We thank
+                    you for your patience and support.</span><br><br>
+            </div>
+            <div class="form">
+                <span>Request Type <br></span>
+                <select name="" id="">
+                    <option value="1">Modify Order</option>
+                    <option value="2">Cancel Order</option>
+                    <option value="3">Return Order</option>
+                    <option value="4">Question Regarding Order</option>
+                    <option value="5">Other</option>
+                </select>
+                <br><br>
+                <form class="myform" action="" onsubmit="submitform()">
+                    <label for="">Name</label>
+                    <input type="text" id="name" required>
+
+                    <label for="">Order Number</label><br>
+                    <input type="number" name="" pattern="[0-9]{10}" placeholder="0**" required id="orderNumber">
+
+                    <label for="">Email</label><br>
+                    <input type="email" name="" placeholder="exemple@gmail.com" required id="email">
+
+                    <label for="">Subject</label><br>
+                    <input type="text" name="" required id="subject">
+
+                    <label for="">Message</label><br>
+                    <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    <div class="sub_reset">
+                        <input type="submit" id="subRe" onclick="">
+                        <input type="reset" id="subRe">
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div id="signIn" class="account">
+        <div class="box">
+            <h1>Welcome to DE JAVU</h1>
+            <h3 id="exit"><a href="">X</a></h3>
+            <form action="" onsubmit="submitformsignIn()">
+                <input id="usname" size=40 type="email" placeholder="Email" required><br>
+                <input id="psword" size=40 type="password" placeholder="Password" required><br>
+                <input onclick="" type="submit" value="Log In">
+            </form>
+            <span><a href="">Forgot Password?</a></span>
+            <span><a href="#" onclick="signUp()">Create account</a></span>
+        </div>
+    </div>
+    <div id="signUp" class="account">
+        <div class="box">
+            <h1>Welcome to DE JAVU</h1>
+            <h3 id="exit"><a href="">X</a></h3>
+            <form action="" onsubmit="submitformsignUp()">
+                <input id="username" size=40 type="email" placeholder="Email" required><br>
+                <input id="password" size=40 type="password" placeholder="Password" required><br>
+                <input type="submit" value="Sign Up">
+            </form>
+            <span><a href="">Forgot Password?</a></span>
+            <span><a href="#" onclick="signIn()">Already have?</a></span>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    function signUp() {
+        document.getElementById("signIn").style.display = 'none';
+        document.getElementById("signUp").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)';
+    }
+
+    function signIn() {
+        document.getElementById("signUp").style.display = 'none';
+        document.getElementById("signIn").style.display = 'block';
+        document.getElementById("body").style.backgroundColor = 'rgba(180, 169, 169, 0.795)';
+    }
+
+    function submitformsignUp() {
+        document.getElementById("signIn").style.display = 'none';
+        document.getElementById("signUp").style.display = 'none';
+        document.getElementById("body").style.backgroundColor = '#ffffff';
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        alert("SUCCESS !")
+    }
+
+    function submitformsignIn() {
+
+        let username = document.getElementById('usname').value;
+        let password = document.getElementById('psword').value;
+        let usSignUp = localStorage.getItem('username')
+        let psSignUp = localStorage.getItem('password')
+        if (username == usSignUp && password == psSignUp) {
+            alert("SUCCESS !");
+            document.getElementById("signIn").style.display = 'none';
+            document.getElementById("signUp").style.display = 'none';
+            document.getElementById("body").style.backgroundColor = '#ffffff';
+        } else {
+            alert("FAIL !");
+        }
+
+    }
+
+    function submitform() {
+        alert('Success')
+    }
+</script>
+
+</html>
